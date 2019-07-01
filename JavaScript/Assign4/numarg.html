@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Functions And Dialog Boxes</title>  
+<script language="JavaScript">
+    function dispAvg() {
+        total = 0;
+        for(i=0; i<arguments.length; i++) {
+            total += arguments[i]; 
+        }
+        document.write("Average is: " + (total/arguments.length))
+    }
+    dispAvg(1,2,3);
+    document.write("</br>");
+    dispAvg(1,2,3,4,5,6);
+</script>    
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Form Demo</title>
+
+<script language="JavaScript">
+    
+   function validateEmployee() {
+       val1 = document.f1.ip1.value;
+        val2 = document.f1.ip2.value;
+        val3 = document.f1.ip3.value;
+       var emptyTest = isEmpty();
+       var spaceTest = onlySpaces();
+       var numbersTest = onlyNumbers();
+       var alphasTest = onlyAlphas();
+       var dateTest = isValidDate();
+       if(!numbersTest) alert("Employee number should only contain numbers");
+       if(!alphasTest) alert("Employee name should only contain alphabets");
+       if(!dateTest) alert("Invalid Date Format");
+       if(emptyTest == 1 && spaceTest == 1 && numbersTest && alphasTest && dateTest)
+           alert("Employee details saved!!");
+       else
+           alert("Employee details cannot be validated");
+       
+   }
+    
+    function isEmpty() {
+        if(val1 == null || val2 == null || val3 == null) return 0;
+        else return 1;
+    }
+    
+     function onlySpaces() {
+        if(val1 == "" || val2 == "" || val3 == "") return 0;
+        else return 1;
+    }
+    
+     function onlyNumbers() {
+        var isnum = /^\d+$/.test(val1);
+         return isnum;
+    }
+    
+    function onlyAlphas() {
+        var isalpha = /^[a-zA-Z]+$/.test(val2);
+        return isalpha;
+    }
+    
+    function isValidDate()
+    {
+        if(!/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(val3)) return false;
+        
+        
+         // Parse the date parts to integers
+        var parts = val3.split("/");
+        var day = parseInt(parts[1], 10);
+        var month = parseInt(parts[0], 10);
+        var year = parseInt(parts[2], 10);
+
+        // Check the ranges of month and year
+        if(year < 1000 || year > 3000 || month == 0 || month > 12)
+            return false;
+
+        var monthLength = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+
+        // Adjust for leap years
+        if(year % 400 == 0 || (year % 100 != 0 && year % 4 == 0))
+            monthLength[1] = 29;
+
+        // Check the range of the day
+        return day > 0 && day <= monthLength[month - 1];
+    }
+    
+    
+</script>    
+</head>
+<body>
+    <form name="f1">
+        Employee Number<input type="text" name="ip1"></br>
+        Employee Name<input type="text" name="ip2"></br>
+        Date of Joining<input type="text" name="ip3"></br>
+        <input type="button" onClick="validateEmployee()" value="Submit">
+    </form>
+    
+    
+</body
+</html> 

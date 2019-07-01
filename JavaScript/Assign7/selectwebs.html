@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Form Demo</title>  
+<script language="JavaScript">
+  function disp() {
+      ind = document.f1.webs.selectedIndex;
+      switch(true) {
+          case (document.f1.webs.options[ind].value == 1):
+              location.href = "https://www.google.com";
+              break;
+          case (document.f1.webs.options[ind].value == 2):
+              location.href = "https://www.amazon.com";
+              break;
+          case (document.f1.webs.options[ind].value == 3):
+              location.href = "https://www.facebook.com";
+              break;
+          case (document.f1.webs.options[ind].value == 4):
+              location.href = "https://www.youtube.com";
+              break;
+      }
+  }
+    
+</script>    
+</head>
+<body>
+    <form name="f1" >
+         <select name="webs" onchange="disp()">
+            <option value="1" >Google</option> 
+            <option value="2">Amazon</option> 
+            <option value="3">Facebook</option> 
+            <option value="4">YouTube</option> 
+        </select>
+    </form>
+</body
+</html> 

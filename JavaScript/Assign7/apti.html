@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Form Demo</title>  
+<style>
+    body {
+        background: #beb37c;
+    }
+    h1 {
+        text-align: center;
+        color: darkgreen
+    }
+    h2 {
+        text-align: center;
+        color: darkred
+    }
+    form {
+        text-align: center;
+    }
+</style>
+<script language="JavaScript">
+   function test() {
+       val=document.frm1.rad.value;
+       if(val == 1000) alert("Correct Answer!");
+       else alert("Incorrect Answer!");
+   }
+</script>    
+</head>
+<body>
+    <h1>Questions</h1>
+    <h2>What is the minimum balance for salary account in Infy Bank?</h2>
+    <form name="frm1" >
+         <input type="radio" name="rad" value="1000">1000.00
+         <input type="radio" name="rad" value="0">00.00
+         <input type="radio" name="rad" value="100">100.00
+        <input type="radio" name="rad" value="Not answerd">NOT ANSWERED</br></br>
+        <input type="button" value="Submit" name="but1" onClick="test()">
+    </form>
+</body
+</html> 

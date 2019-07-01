@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>styling form</title>  
+    <style>
+        body {
+            text-align: center
+        }
+        h1, h2 {
+           color: brown
+        }
+        table {
+            border: thick dotted red;
+            margin: 0 auto 0 auto;
+            border-spacing: 20px;
+/*            border-collapse: separate*/
+        }
+    
+        input,select {
+            color: red
+        }
+        .c {
+            width: 100%;
+            letter-spacing: 2px;
+            margin-left: 60%;
+        }        
+    </style>
+</head>
+<body>
+    <h1>Infy Bank</h1>
+    <h2>Fund Transfer</h2>
+    <table>
+        <tr>
+            <td>Pay to:</td>
+            <td>
+                <select>
+                    <option>Jack</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Pay from (Account No:)</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Amount</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>Transaction Remark</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>
+                <input class="c" type="submit" value="Transfer Fund">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

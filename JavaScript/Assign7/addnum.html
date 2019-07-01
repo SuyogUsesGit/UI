@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Form Demo</title>  
+<script language="JavaScript">
+   function add() {
+       document.frm1.txt3.value = parseInt(document.frm1.txt1.value) + parseInt(document.frm1.txt2.value);
+   }
+</script>    
+</head>
+<body>
+    <form name="frm1" >
+        Num1: <input type="text" name="txt1" value="0"></br>
+        Num2: <input type="text" name="txt2" value="0"></br>
+        Result: <input type="text" name="txt3" value="0"></br>
+        <input type="button" value="Add" name="but1" onClick="add()">
+    </form>
+</body>
+</html> 

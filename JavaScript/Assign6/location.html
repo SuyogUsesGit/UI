@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Location</title>  
+<script language="JavaScript">
+    function func() {
+        var initialPage = location.pathname;
+        location.replace("https://www.google.com" + initialPage);
+    }
+    
+</script>    
+</head>
+<body>
+    <h3>Location Demo</h3>
+    <input type="button" value="change" onClick="func()">
+</body>
+</html> 
