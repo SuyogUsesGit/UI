@@ -1,0 +1,1 @@
+select ename from employee where deptno not in (30,40,10);

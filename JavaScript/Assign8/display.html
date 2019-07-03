@@ -13,6 +13,8 @@
        var numbersTest = onlyNumbers();
        var alphasTest = onlyAlphas();
        var dateTest = isValidDate();
+       if(emptyTest == 0) alert("Employee details cannot be empty");
+       if(spaceTest == 0) alert("Employee details cannot contain only spaces");
        if(!numbersTest) alert("Employee number should only contain numbers");
        if(!alphasTest) alert("Employee name should only contain alphabets");
        if(!dateTest) alert("Invalid Date Format");
@@ -24,13 +26,16 @@
    }
     
     function isEmpty() {
-        if(val1 == null || val2 == null || val3 == null) return 0;
+        if(val1 == 0 || val2 == 0 || val3 == 0) return 0;
         else return 1;
     }
     
      function onlySpaces() {
-        if(val1 == "" || val2 == "" || val3 == "") return 0;
-        else return 1;
+         if(!isEmpty) {
+            if((!/\S/.test(val1)) || (!/\S/.test(val2)) || (!/\S/.test(val3))) return 0;
+            else return 1;
+        }
+         return 1;
     }
     
      function onlyNumbers() {

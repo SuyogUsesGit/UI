@@ -1,0 +1,1 @@
+select max(sal), min(sal), sum(sal), avg(sal) from employee where deptno = 20 group by deptno having avg(sal) > 1000;
